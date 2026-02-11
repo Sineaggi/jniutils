@@ -5,7 +5,7 @@ plugins {
 }
 
 description = "The JNI shared library, also known as the native bindings."
-group = "io.github.sineaggi"
+group = "io.github.sineaggi.suez"
 
 library {
     // The native component of the JNI library needs to be a shared library.

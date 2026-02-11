@@ -3,7 +3,7 @@ plugins {
 }
 
 description = "The JNI classes, also known as the JVM bindings."
-group = "io.github.sineaggi"
+group = "io.github.sineaggi.suez"
 
 dependencies {
     implementation(project(":java-loader"))

@@ -5,7 +5,7 @@ plugins {
 }
 
 description = "The JNI library as the consumer would expect."
-group = "io.github.sineaggi"
+group = "io.github.sineaggi.suez"
 
 tasks.withType<JavaCompile>().configureEach {
     options.release = 22

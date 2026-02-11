@@ -2,7 +2,7 @@ plugins {
     `java-library`
 }
 
-group = "io.github.sineaggi"
+group = "io.github.sineaggi.suez"
 
 val generatedSourcesDir = layout.buildDirectory.dir("generated/sources/jextract/java/main")
 
