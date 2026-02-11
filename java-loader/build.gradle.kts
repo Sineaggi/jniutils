@@ -3,3 +3,4 @@ plugins {
 }
 
 description = "The library for loading the shared library from the classpath or JAR."
+group = "io.github.sineaggi"

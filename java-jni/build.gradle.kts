@@ -3,9 +3,10 @@ plugins {
 }
 
 description = "The JNI classes, also known as the JVM bindings."
+group = "io.github.sineaggi"
 
 dependencies {
-    implementation(projects.javaLoader)
+    implementation(project(":java-loader"))
 }
 
 val generatedHeaders = configurations.consumable("generatedHeaders")

@@ -5,6 +5,7 @@ plugins {
 }
 
 description = "The JNI library as the consumer would expect."
+group = "io.github.sineaggi"
 
 tasks.withType<JavaCompile>().configureEach {
     options.release = 22
@@ -17,23 +18,13 @@ tasks.withType<JavaCompile>().configureEach {
 //    }
 //}
 
-repositories {
-    mavenCentral()
-}
-
 testing {
     suites {
         named<JvmTestSuite>("test") {
             useJUnitJupiter(libs.versions.junit)
             dependencies {
-                implementation(projects.jniExtract)
+                implementation(project(":jni-extract"))
             }
         }
     }
-}
-
-tasks.withType<JavaCompile>().configureEach {
-}
-
-tasks.test {
 }

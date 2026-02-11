@@ -2,6 +2,8 @@ plugins {
     `java-library`
 }
 
+group = "io.github.sineaggi"
+
 val generatedSourcesDir = layout.buildDirectory.dir("generated/sources/jextract/java/main")
 
 val generateJextractSources by tasks.registering(Exec::class) {
