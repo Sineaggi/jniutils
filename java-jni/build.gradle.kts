@@ -8,10 +8,7 @@ dependencies {
     implementation(projects.javaLoader)
 }
 
-val generatedHeaders by configurations.creating {
-    isCanBeConsumed = true
-    isCanBeResolved = false
-}
+val generatedHeaders = configurations.consumable("generatedHeaders")
 
 artifacts {
     add(generatedHeaders.name, tasks.compileJava.flatMap { it.options.headerOutputDirectory })

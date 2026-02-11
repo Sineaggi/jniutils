@@ -52,7 +52,7 @@ tasks.withType<LinkSharedLibrary>().configureEach {
     )
 }
 
-val generatedHeaders by configurations.creating {
+val generatedHeaders by configurations.registering {
     isCanBeConsumed = false
     isCanBeResolved = true
 }

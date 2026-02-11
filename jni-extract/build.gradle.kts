@@ -8,16 +8,16 @@ val generateJextractSources by tasks.registering(Exec::class) {
     outputs.dir(generatedSourcesDir)
     val jextractHome = providers.gradleProperty("jextract_home")
     inputs.dir(jextractHome)
-    val jdk20Home = providers.gradleProperty("jdk20_home")
-    inputs.dir(jdk20Home)
+    val jdk21Home = providers.gradleProperty("jdk21_home")
+    inputs.dir(jdk21Home)
     inputs.file(layout.projectDirectory.file("includes.txt"))
     commandLine(
         "cmd",
         "/c",
         file(jextractHome.get()).resolve("bin/jextract").absolutePath,
         file("header.h"),
-        "-I", file(jdk20Home.get()).resolve("include").absolutePath,
-        "-I", file(jdk20Home.get()).resolve("include/win32").absolutePath,
+        "-I", file(jdk21Home.get()).resolve("include").absolutePath,
+        "-I", file(jdk21Home.get()).resolve("include/win32").absolutePath,
         "--source",
         "--target-package", "com.sineaggi.jniutils.internal.jni",
         "@includes.txt",
@@ -26,9 +26,9 @@ val generateJextractSources by tasks.registering(Exec::class) {
     )
 }
 
-java.toolchain.languageVersion.set(JavaLanguageVersion.of(20))
+java.toolchain.languageVersion.set(JavaLanguageVersion.of(21))
 
 tasks.withType<JavaCompile>().configureEach {
-    options.release = 20
+    options.release = 21
     options.compilerArgs = listOf("--enable-preview")
 }

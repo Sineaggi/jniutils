@@ -3,7 +3,7 @@ pluginManagement {
         gradlePluginPortal()
     }
     plugins {
-        id("dev.nokee.jni-library") version "0.4.0"
+        //id("dev.nokee.jni-library") version "0.4.0"
     }
 }
 

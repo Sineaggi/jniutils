@@ -43,7 +43,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'oracle'
-          java-version: '20'
+          java-version: '21'
           check-latest: true
       - name: Setup and execute Gradle 'build' task
         uses: gradle/gradle-build-action@v2

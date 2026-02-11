@@ -1,22 +1,23 @@
 plugins {
     java
-    id("dev.nokee.jni-library")
+    //id("dev.nokee.jni-library")
+    // todo: `jni-library`
 }
 
 description = "The JNI library as the consumer would expect."
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(20)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 tasks.withType<JavaCompile>().configureEach {
-    options.release = 20
+    options.release = 21
 }
 
-library {
-    dependencies {
-        api(projects.javaJni)
-        nativeImplementation(projects.cppJni)
-    }
-}
+//library {
+//    dependencies {
+//        api(projects.javaJni)
+//        nativeImplementation(projects.cppJni)
+//    }
+//}
 
 repositories {
     mavenCentral()
