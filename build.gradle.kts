@@ -6,10 +6,8 @@ plugins {
 
 description = "The JNI library as the consumer would expect."
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(21)
-
 tasks.withType<JavaCompile>().configureEach {
-    options.release = 21
+    options.release = 22
 }
 
 //library {
@@ -26,7 +24,7 @@ repositories {
 testing {
     suites {
         named<JvmTestSuite>("test") {
-            useJUnitJupiter("5.9.3")
+            useJUnitJupiter(libs.versions.junit)
             dependencies {
                 implementation(projects.jniExtract)
             }
@@ -35,9 +33,7 @@ testing {
 }
 
 tasks.withType<JavaCompile>().configureEach {
-    options.compilerArgs = listOf("--enable-preview")
 }
 
 tasks.test {
-    jvmArgs = listOf("--enable-preview")
 }
