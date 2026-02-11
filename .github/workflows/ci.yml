@@ -43,10 +43,10 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           distribution: 'oracle'
-          java-version: '21'
+          java-version: '22'
           check-latest: true
       - name: Setup and execute Gradle 'build' task
         uses: gradle/gradle-build-action@v2
         with:
-          gradle-version: '8.2'
+          gradle-version: '9.5.0-milestone-1'
           arguments: 'build'
