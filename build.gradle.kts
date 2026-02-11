@@ -21,7 +21,7 @@ tasks.withType<JavaCompile>().configureEach {
 testing {
     suites {
         named<JvmTestSuite>("test") {
-            useJUnitJupiter(libs.versions.junit)
+            useJUnitJupiter("6.1.0-M1")
             dependencies {
                 implementation(project(":jni-extract"))
             }
