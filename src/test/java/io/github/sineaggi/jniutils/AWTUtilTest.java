@@ -1,4 +1,4 @@
-package com.github.sineaggi.jniutils;
+package io.github.sineaggi.jniutils;
 
 import org.junit.jupiter.api.Test;
 

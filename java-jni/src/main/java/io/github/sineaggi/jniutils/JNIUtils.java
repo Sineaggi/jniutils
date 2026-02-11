@@ -1,5 +1,5 @@
 
-package com.github.sineaggi.jniutils;
+package io.github.sineaggi.jniutils;
 
 public class JNIUtils {
 
